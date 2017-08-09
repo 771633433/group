@@ -12,16 +12,10 @@
 <script>
  $(document).ready(function() {
                     $("#customers").kendoDropDownList({
-                        dataTextField: "ContactName",
-                        dataValueField: "CustomerID",
-                        height: 400,
-                        dataSource: {
-                            type: "odata",
-                            transport: {
-                                read: "//demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
-                            },
-                            group: { field: "Country" }
-                        }
+                        dataSource:{
+                          data:["James","Wade","Paul"]
+                        },
+                        animation:false
                     });
                 });
 export default {
